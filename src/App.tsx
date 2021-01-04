@@ -6,7 +6,7 @@ import HomePage from './pages/Home';
 // this should call the router here instead of homepage in a prod app
 const App: React.FunctionComponent = () => {
     return (
-        <div className="App">
+        <div className="App" data-testid="appWrapper">
             <HomePage />
         </div>
     );

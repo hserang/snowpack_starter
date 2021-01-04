@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
-import { expect } from 'chai';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
+jest.mock('./pages/Home', () => () => <div data-testid="mockHome">Home</div>);
+
 describe('<App>', () => {
-  it('renders learn react link', () => {
-    const { getByText } = render(<App />);
-    const linkElement = getByText(/learn react/i);
-    expect(document.body.contains(linkElement));
-  });
+    it('renders Home mock', () => {
+        render(<App />);
+        expect(screen.getByTestId('mockHome')).toBeTruthy();
+    });
 });

@@ -1,14 +1,8 @@
 import React from 'react';
+import type { LayoutProps } from 'types';
 import './styles.css';
 
-interface ContentAndHeaderProps {
-    children: {
-        header?: React.ReactChild;
-        content: React.ReactChild;
-    };
-}
-
-const ContentAndHeaderLayout: React.FunctionComponent<ContentAndHeaderProps> = props => {
+const ContentAndHeaderLayout: React.FunctionComponent<LayoutProps> = props => {
     const {
         children: { content, header }
     } = props;

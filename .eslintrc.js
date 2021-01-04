@@ -29,6 +29,7 @@ module.exports = {
         ],
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error'],
+        'react/display-name': 0,
         'react/prop-types': 0
     }
 };

@@ -3,8 +3,11 @@ import React, { useEffect, useState } from 'react';
 import ContentAndHeader from '../../layouts/ContentAndHeader';
 import './styles.css';
 
+export const headerText = 'Header component';
+export const contentText = 'Content component';
+
 const Header: React.FunctionComponent = () => {
-    return <div>Header component</div>;
+    return <div>{headerText}</div>;
 };
 
 const Content: React.FunctionComponent = () => {
@@ -18,7 +21,7 @@ const Content: React.FunctionComponent = () => {
     return (
         <>
             <img src={logo} className="App-logo" alt="logo" />
-            <p>I can haz content</p>
+            <p>{contentText}</p>
             <p>
                 Page has been open for <code>{count}</code> seconds.
             </p>
@@ -28,12 +31,14 @@ const Content: React.FunctionComponent = () => {
 
 const HomePage: React.FunctionComponent = () => {
     return (
-        <ContentAndHeader>
-            {{
-                content: <Content />,
-                header: <Header />
-            }}
-        </ContentAndHeader>
+        <div data-testid="homeWrapper">
+            <ContentAndHeader>
+                {{
+                    content: <Content />,
+                    header: <Header />
+                }}
+            </ContentAndHeader>
+        </div>
     );
 };
 

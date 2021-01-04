@@ -1,6 +1,13 @@
-# New Project
+# Snowpack, TS, React starter
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
+
+## Notes
+
+This is a starter. It would be ideal to get JSS or styled components working in Snowpack as well and will save that for another chapter.
+For the time being, using `.css` files, but prefer otherwise.
+
+The larger hassles in this initial setup are the ts/eslint configurations. These may require more tweaking depending on your usage.
 
 ## Available Scripts
 
